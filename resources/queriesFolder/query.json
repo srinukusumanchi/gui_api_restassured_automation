@@ -1,0 +1,8 @@
+[
+	{
+		"Id": 1,
+		"Query": "select * from agent where agenttype = '1' and status = 0 and agenttradingstatus = '0' and (tradingagenttype = '1' or tradingagenttype = '2')",
+		"IdentifierFlag": true,
+		"dbIdentifier": "4"
+	}
+]

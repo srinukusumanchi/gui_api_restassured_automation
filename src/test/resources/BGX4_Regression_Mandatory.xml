@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Web Demo Suite" verbose="0" parallel="none" thread-count="10">
+    <listeners>
+        <listener class-name="com.quantum.java.pages.ScotiaQuantumReportListener"/>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+    </listeners>
+    <test name="L1 Regression Mandatory Test" enabled="true">
+        <groups>
+            <run>
+                <!--                <include name="@customersearchusingaddressdetails"/>-->
+
+                <!--                                               <include name="@PersonalCustomerUpdateWithInquiry"/>-->
+
+                <!--                                               <include name="@BGX4_regression_mandatory"/>-->
+
+                <!--                <include name="@NonPersonalCustomerCreation"/>-->
+                <!--                                                <include name="@SingleId"/>-->
+                <!--                                <include name="@AgeLessThan12"/>-->
+                <!--                                                <include name="@ABBSID"/>-->
+                <include name="@ScotiaAccount"/>
+                <include name="@PersonalCustomerUpdate"/>
+                <!--                <include name="@NonPersonalCustomerUpdate"/>-->
+                <!--                <include name="@locatecustomerwithaccountnumber"/>-->
+                <include name="@fatca"/>
+                <!--                <include name="@RKO"/>-->
+                <!--                <include name="@addcuacrelationship"/>-->
+                <!--                <include name="@updatecuacrelationship"/>-->
+                <!--                <include name="@productsandservices"/>-->
+            </run>
+        </groups>
+        <classes>
+            <class
+                    name="com.quantum.utility.ScotiaGherkinScenarioFactory"/>
+        </classes>
+    </test>
+</suite>
+
